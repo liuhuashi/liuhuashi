@@ -3,8 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="showdown.min.js"></script>
+
 </head>
 <body>
 <h1>Hello World!</h1>
+<script>
+    var converter = new showdown.Converter();
+    //转换为HTML
+    var html = converter.makeHtml('# github\n\n## github\n\n添加博客样式~~\n');
+    //将HTML添加到你要展示的容器
+    document.write(html)
+</script>
 </body>
 </html>
